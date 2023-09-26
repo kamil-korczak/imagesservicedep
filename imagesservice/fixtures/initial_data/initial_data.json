@@ -1,0 +1,50 @@
+[
+  {
+    "model": "imagesservice.AccountTier",
+    "pk": 1,
+    "fields": {
+      "name": "Basic",
+      "enable_original_link": false,
+      "enable_generate_expiring_links": false,
+      "is_builtin": true
+    }
+  },
+  {
+    "model": "imagesservice.AccountTier",
+    "pk": 2,
+    "fields": {
+      "name": "Premium",
+      "enable_original_link": true,
+      "enable_generate_expiring_links": false,
+      "is_builtin": true
+    }
+  },
+  {
+    "model": "imagesservice.AccountTier",
+    "pk": 3,
+    "fields": {
+      "name": "Enterprise",
+      "enable_original_link": true,
+      "enable_generate_expiring_links": true,
+      "is_builtin": true
+    }
+  },
+  {
+    "model": "imagesservice.ThumbnailSize",
+    "pk": 1,
+    "fields": {
+      "height": 200,
+      "is_builtin": true,
+      "tiers": [1, 2, 3]
+    }
+  },
+  {
+    "model": "imagesservice.ThumbnailSize",
+    "pk": 2,
+    "fields": {
+      "height": 400,
+      "is_builtin": true,
+      "tiers": [2, 3]
+    }
+  }
+  ]

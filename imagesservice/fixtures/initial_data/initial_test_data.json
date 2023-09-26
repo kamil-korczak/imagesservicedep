@@ -1,0 +1,183 @@
+[
+    {
+        "model": "auth.user",
+        "pk": 1,
+        "fields": {
+            "password": "pbkdf2_sha256$600000$mMNvIJyWgqtOokrNBKqhC1$r0JEzJgD5jwOWhk314RxdWbWJuIqjZ5pjyrBvK24uNQ=",
+            "last_login": null,
+            "is_superuser": true,
+            "username": "admin",
+            "first_name": "",
+            "last_name": "",
+            "email": "czakix+test_admin@gmail.com",
+            "is_staff": true,
+            "is_active": true,
+            "date_joined": "2023-09-25T20:51:14.012Z",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 2,
+        "fields": {
+            "password": "pbkdf2_sha256$600000$mMNvIJyWgqtOokrNBKqhC1$r0JEzJgD5jwOWhk314RxdWbWJuIqjZ5pjyrBvK24uNQ=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "testb",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2023-09-25T20:52:43.996Z",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 3,
+        "fields": {
+            "password": "pbkdf2_sha256$600000$mMNvIJyWgqtOokrNBKqhC1$r0JEzJgD5jwOWhk314RxdWbWJuIqjZ5pjyrBvK24uNQ=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "testp",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2023-09-25T20:53:11.542Z",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 4,
+        "fields": {
+            "password": "pbkdf2_sha256$600000$mMNvIJyWgqtOokrNBKqhC1$r0JEzJgD5jwOWhk314RxdWbWJuIqjZ5pjyrBvK24uNQ=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "teste",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2023-09-25T20:55:23Z",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "imagesservice.useraccounttier",
+        "pk": 1,
+        "fields": {
+            "account_tier": 1,
+            "user": 2
+        }
+    },
+    {
+        "model": "imagesservice.useraccounttier",
+        "pk": 2,
+        "fields": {
+            "account_tier": 2,
+            "user": 3
+        }
+    },
+    {
+        "model": "imagesservice.useraccounttier",
+        "pk": 3,
+        "fields": {
+            "account_tier": 3,
+            "user": 4
+        }
+    },
+    {
+        "model": "imagesservice.image",
+        "pk": "498b26c1-a363-4ea7-932a-57ac78c75812",
+        "fields": {
+            "user": 3,
+            "upload_datetime": "2023-09-25T21:56:51.678Z",
+            "update_datetime": "2023-09-25T21:56:51.678Z",
+            "filename": "images/originals/4f0059bf9d1d47498c1ecdbfe4458c38.jpg"
+        }
+    },
+    {
+        "model": "imagesservice.image",
+        "pk": "75830a27-82c5-4907-8c48-3caeed50a77d",
+        "fields": {
+            "user": 2,
+            "upload_datetime": "2023-09-25T21:56:06.477Z",
+            "update_datetime": "2023-09-25T21:56:06.477Z",
+            "filename": "images/originals/139e53125f394969b52dfd1e8a0a7dd7.jpg"
+        }
+    },
+    {
+        "model": "imagesservice.image",
+        "pk": "c5f43fee-a9d0-444f-97b8-3fa35e06d4a3",
+        "fields": {
+            "user": 4,
+            "upload_datetime": "2023-09-25T21:57:32.772Z",
+            "update_datetime": "2023-09-25T21:57:32.772Z",
+            "filename": "images/originals/0ac76a80a63f4f78a440785b2a30bc70.jpg"
+        }
+    },
+    {
+        "model": "imagesservice.thumbnailimage",
+        "pk": "68236fc8-d2e1-4a6a-b9b3-0344bcc8ce69",
+        "fields": {
+            "image": "c5f43fee-a9d0-444f-97b8-3fa35e06d4a3",
+            "height": 200,
+            "upload_datetime": "2023-09-25T21:57:33.236Z",
+            "update_datetime": "2023-09-25T21:57:33.239Z",
+            "filename": "images/thumb/08c4d67257424c3ea0e375dde44f87ba.jpg"
+        }
+    },
+    {
+        "model": "imagesservice.thumbnailimage",
+        "pk": "805ae83b-9c71-4e42-bdb4-0eea509d4d21",
+        "fields": {
+            "image": "498b26c1-a363-4ea7-932a-57ac78c75812",
+            "height": 200,
+            "upload_datetime": "2023-09-25T21:56:52.176Z",
+            "update_datetime": "2023-09-25T21:56:52.179Z",
+            "filename": "images/thumb/c0a4854434c444a9b9817cf5f81a2469.jpg"
+        }
+    },
+    {
+        "model": "imagesservice.thumbnailimage",
+        "pk": "85b12990-a241-4b1b-ae0b-c756ada9fb69",
+        "fields": {
+            "image": "75830a27-82c5-4907-8c48-3caeed50a77d",
+            "height": 200,
+            "upload_datetime": "2023-09-25T21:56:06.991Z",
+            "update_datetime": "2023-09-25T21:56:06.993Z",
+            "filename": "images/thumb/34b6b10d59b04e7588afe2b047e8a363.jpg"
+        }
+    },
+    {
+        "model": "imagesservice.thumbnailimage",
+        "pk": "8f215f48-cafe-412a-ad58-5ec8662ef0ab",
+        "fields": {
+            "image": "498b26c1-a363-4ea7-932a-57ac78c75812",
+            "height": 400,
+            "upload_datetime": "2023-09-25T21:56:52.283Z",
+            "update_datetime": "2023-09-25T21:56:52.286Z",
+            "filename": "images/thumb/7c4d220faecf4ab79de7ba7b479baf92.jpg"
+        }
+    },
+    {
+        "model": "imagesservice.thumbnailimage",
+        "pk": "ae1af47a-92c9-4997-ae88-fde210e3dba4",
+        "fields": {
+            "image": "c5f43fee-a9d0-444f-97b8-3fa35e06d4a3",
+            "height": 400,
+            "upload_datetime": "2023-09-25T21:57:33.310Z",
+            "update_datetime": "2023-09-25T21:57:33.315Z",
+            "filename": "images/thumb/b88ef42b37a245f896a6e708fd054820.jpg"
+        }
+    }
+]
