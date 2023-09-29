@@ -10,7 +10,11 @@ BASIC_IMAGE_ID = "75830a27-82c5-4907-8c48-3caeed50a77d"
 PREMIUM_IMAGE_ID = "498b26c1-a363-4ea7-932a-57ac78c75812"
 ENTERPRISE_IMAGE_ID = "c5f43fee-a9d0-444f-97b8-3fa35e06d4a3"
 
+BASIC_THUMBNAIL_IMAGE_400_ID = '75a980ce-6333-41af-a305-44af0a907047'
+PREMIUM_EXPIRING_IMAGE_ID = '75a980ce-6333-41af-a305-44af0a907047'
+
 IMAGE_FOREST = os.path.join(settings.BASE_DIR, 'imagesservice/api/tests/data/images/forest.jpg')
 IMAGE_PARK = os.path.join(settings.BASE_DIR, 'imagesservice/api/tests/data/images/park.jpg')
+IMAGE_PARK_WITH_ROAD = os.path.join(settings.BASE_DIR, 'imagesservice/api/tests/data/images/park_with_road.jpg')
 RANDOM_FILE = os.path.join(settings.BASE_DIR, 'imagesservice/api/tests/data/images/random.txt')
 IMAGE_TOO_SMALL = os.path.join(settings.BASE_DIR, 'imagesservice/api/tests/data/images/image_too_small.jpg')

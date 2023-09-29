@@ -63,14 +63,14 @@ class TestPatchImage:
         with open(IMAGE_FOREST, 'rb') as fp:
             data = {"filename": fp}
             response = authenticated_client__basic_account.patch(basic_image_url, format='multipart', data=data)
-            assert response.status_code == status.HTTP_200_OK
+        assert response.status_code == status.HTTP_200_OK
 
     def test_basic_account_with_too_small_image(self, authenticated_client__basic_account, basic_image_url):
         with open(IMAGE_TOO_SMALL, 'rb') as fp:
             data = {"filename": fp}
             response = authenticated_client__basic_account.patch(basic_image_url, format='multipart', data=data)
-            assert response.status_code == status.HTTP_400_BAD_REQUEST
-            assert response.json()['filename'] == ['Image height must be at least 400 px, current have 113 px.']
+        assert response.status_code == status.HTTP_400_BAD_REQUEST
+        assert response.json()['filename'] == ['Image height must be at least 400 px, current have 113 px.']
 
     def test_against_image_of_other_user(self, authenticated_client__basic_account, enterprise_image_url):
         response = authenticated_client__basic_account.patch(enterprise_image_url, format='json')
