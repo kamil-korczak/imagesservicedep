@@ -20,8 +20,8 @@ from django.urls import include, path
 from django.conf.urls.static import static
 
 urlpatterns = [
-    path("", include("imagesservice.urls")),
     path('admin/', admin.site.urls),
+    path('', include('imagesservice.urls')),
 ]
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

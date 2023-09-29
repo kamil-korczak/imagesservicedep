@@ -1,8 +1,9 @@
 import pytest
 from pytest_drf import APIViewTest, UsesGetMethod, UsesPostMethod, Returns403
 from rest_framework import status
-from ...models import ExpiringImage
-from .schemas.expiring_images_list import EXPIRING_IMAGE_DETAILS_ENTERPRISE_SCHEMA
+from imagesservice.models import ExpiringImage
+from imagesservice.api.tests.schemas.expiring_images_list import EXPIRING_IMAGE_DETAILS_ENTERPRISE_SCHEMA
+from imagesservice.config import EXPIRE_AFTER_MIN, EXPIRE_AFTER_MAX
 
 
 @pytest.mark.django_db
@@ -78,14 +79,14 @@ class TestPatchExpiringImage:
 
     def test_enterprise_account_with_image_belongs_to_account_expire_after_too_small(
             self, authenticated_client__enterprise_account, enterprise_expiring_image_detail_url):
-        data = {'expire_after': 200}
+        data = {'expire_after': EXPIRE_AFTER_MIN-10}
         response = authenticated_client__enterprise_account.patch(enterprise_expiring_image_detail_url, format='json', data=data)
         assert response.status_code == status.HTTP_400_BAD_REQUEST
-        assert response.json() == {'expire_after': ['Ensure this value is greater than or equal to 300.']}
+        assert response.json() == {'expire_after': [f'Ensure this value is greater than or equal to {EXPIRE_AFTER_MIN}.']}
 
     def test_enterprise_account_with_image_belongs_to_account_expire_after_too_big(
             self, authenticated_client__enterprise_account, enterprise_expiring_image_detail_url):
-        data = {'expire_after': 35000}
+        data = {'expire_after': EXPIRE_AFTER_MAX+10}
         response = authenticated_client__enterprise_account.patch(enterprise_expiring_image_detail_url, format='json', data=data)
         assert response.status_code == status.HTTP_400_BAD_REQUEST
-        assert response.json() == {'expire_after': ['Ensure this value is less than or equal to 30000.']}
+        assert response.json() == {'expire_after': [f'Ensure this value is less than or equal to {EXPIRE_AFTER_MAX}.']}
