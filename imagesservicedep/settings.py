@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = bool(os.getenv('DEBUG'))
+DEBUG = os.getenv('DEBUG', 'false').lower() == 'true'
 
 ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS').split(',')
 
@@ -40,7 +40,6 @@ INSTALLED_APPS = [
     'rest_framework',
     'imagesservice',
     'django_cleanup.apps.CleanupConfig',
-    # 'django_extensions',   # TODO: to remove
 ]
 
 MIDDLEWARE = [
